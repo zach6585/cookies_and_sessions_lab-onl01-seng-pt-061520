@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+    <%= form_tag('/add') do %>
+        Search <%= text_field_tag "product" %>
+        <%= submit_tag "add to cart" %>
+    <% end %>
+    </head>
+    <body>
+    
+            <% session[:cart].each do |prod| %>
+                <%= prod %>
+            
+        <% end %>
+    </body>
+</html>
